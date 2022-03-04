@@ -3,6 +3,7 @@
 	<contact>
       	<lateral_friction value="1"/>
   	</contact>
+	<!-- color -->
 	<material name="black">
 		<color rgba="0.0 0.0 0.0 1.0"/>
 	</material>
@@ -18,6 +19,7 @@
 	<material name="white">
 		<color rgba="1.0 1.0 1.0 1.0"/>
 	</material>
+	<!-- Base_link -->
 	<link name="Base">
 		<inertial>
 			<mass value="20"/>
@@ -38,46 +40,7 @@
 			<material name="green"/>
 		</visual>
 	</link>
-	<link name="LFtoe">
-		<inertial>
-			<mass value="0.1"/>
-			<origin rpy="0 0 0" xyz="-1.4738210651898953e-13 0.0 0.002137253370799286"/>
-			<inertia ixx="0.0016463844447433076" ixy="0.0" ixz="-1.438365870853886e-13" iyy="0.001646384383383429" iyz="0.0" izz="0.0011198385067415983"/>
-		</inertial>
-		<collision name="LFtoe_collision">
-			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.27"/>
-			<geometry>
-				<mesh filename="package://meshes/LFtoe.stl" scale="1.0 1.0 1.0"/>
-			</geometry>
-		</collision>
-		<visual name="LFtoe_visual">
-			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.27"/>
-			<geometry>
-				<mesh filename="package://meshes/LFtoe.stl" scale="1.0 1.0 1.0"/>
-			</geometry>
-			<material name="black"/>
-		</visual>
-	</link>
-	<link name="LFLower">
-		<inertial>
-			<mass value="2"/>
-			<origin rpy="0 0 0" xyz="3.82055498349132e-12 0.014999999999999986 -0.036355895878957684"/>
-			<inertia ixx="0.014224327571654703" ixy="2.2737367544323207e-17" ixz="-2.0938841771567242e-13" iyy="0.015237371730176983" iyz="2.2737367544323207e-17" izz="0.0013158561138827737"/>
-		</inertial>
-		<collision name="LFLower_collision">
-			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
-			<geometry>
-				<mesh filename="package://meshes/LFLower.stl" scale="1.0 1.0 1.0"/>
-			</geometry>
-		</collision>
-		<visual name="LFLower_visual">
-			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
-			<geometry>
-				<mesh filename="package://meshes/LFLower.stl" scale="1.0 1.0 1.0"/>
-			</geometry>
-			<material name="silver"/>
-		</visual>
-	</link>
+	<!-- Hip_link -->
 	<link name="LFHip">
 		<inertial>
 			<mass value="1"/>
@@ -94,26 +57,6 @@
 			<origin rpy="0.0 -0.0 0.0" xyz="0.07 -0.04999999999999999 0.0"/>
 			<geometry>
 				<mesh filename="package://meshes/LFHip.stl" scale="1.0 1.0 1.0"/>
-			</geometry>
-			<material name="white"/>
-		</visual>
-	</link>
-	<link name="LFUpper">
-		<inertial>
-			<mass value="2"/>
-			<origin rpy="0 0 0" xyz="3.411633352823351e-06 0.04738631632794854 -0.08634731324390973"/>
-			<inertia ixx="0.09715494845691629" ixy="-3.476265435892856e-07" ixz="1.3052349241434057e-06" iyy="0.10014218315634625" iyz="0.009316314201057286" izz="0.00946709178016481"/>
-		</inertial>
-		<collision name="LFUpper_collision">
-			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.04999999999999999 -0.3"/>
-			<geometry>
-				<mesh filename="package://meshes/LFUpper.stl" scale="1.0 1.0 1.0"/>
-			</geometry>
-		</collision>
-		<visual name="LFUpper_visual">
-			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.04999999999999999 -0.3"/>
-			<geometry>
-				<mesh filename="package://meshes/LFUpper.stl" scale="1.0 1.0 1.0"/>
 			</geometry>
 			<material name="white"/>
 		</visual>
@@ -178,6 +121,27 @@
 			<material name="white"/>
 		</visual>
 	</link>
+	<!-- Upper_link -->
+	<link name="LFUpper">
+		<inertial>
+			<mass value="2"/>
+			<origin rpy="0 0 0" xyz="3.411633352823351e-06 0.04738631632794854 -0.08634731324390973"/>
+			<inertia ixx="0.09715494845691629" ixy="-3.476265435892856e-07" ixz="1.3052349241434057e-06" iyy="0.10014218315634625" iyz="0.009316314201057286" izz="0.00946709178016481"/>
+		</inertial>
+		<collision name="LFUpper_collision">
+			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.04999999999999999 -0.3"/>
+			<geometry>
+				<mesh filename="package://meshes/LFUpper.stl" scale="1.0 1.0 1.0"/>
+			</geometry>
+		</collision>
+		<visual name="LFUpper_visual">
+			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.04999999999999999 -0.3"/>
+			<geometry>
+				<mesh filename="package://meshes/LFUpper.stl" scale="1.0 1.0 1.0"/>
+			</geometry>
+			<material name="white"/>
+		</visual>
+	</link>
 	<link name="LRUpper">
 		<inertial>
 			<mass value="2"/>
@@ -236,6 +200,27 @@
 				<mesh filename="package://meshes/RRUpper.stl" scale="1.0 1.0 1.0"/>
 			</geometry>
 			<material name="white"/>
+		</visual>
+	</link>
+	<!-- Lower_link -->
+	<link name="LFLower">
+		<inertial>
+			<mass value="2"/>
+			<origin rpy="0 0 0" xyz="3.82055498349132e-12 0.014999999999999986 -0.036355895878957684"/>
+			<inertia ixx="0.014224327571654703" ixy="2.2737367544323207e-17" ixz="-2.0938841771567242e-13" iyy="0.015237371730176983" iyz="2.2737367544323207e-17" izz="0.0013158561138827737"/>
+		</inertial>
+		<collision name="LFLower_collision">
+			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<geometry>
+				<mesh filename="package://meshes/LFLower.stl" scale="1.0 1.0 1.0"/>
+			</geometry>
+		</collision>
+		<visual name="LFLower_visual">
+			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<geometry>
+				<mesh filename="package://meshes/LFLower.stl" scale="1.0 1.0 1.0"/>
+			</geometry>
+			<material name="silver"/>
 		</visual>
 	</link>
 	<link name="LRLower">
@@ -298,6 +283,27 @@
 			<material name="silver"/>
 		</visual>
 	</link>
+	<!-- toe_link -->
+	<link name="LFtoe">
+		<inertial>
+			<mass value="0.1"/>
+			<origin rpy="0 0 0" xyz="-1.4738210651898953e-13 0.0 0.002137253370799286"/>
+			<inertia ixx="0.0016463844447433076" ixy="0.0" ixz="-1.438365870853886e-13" iyy="0.001646384383383429" iyz="0.0" izz="0.0011198385067415983"/>
+		</inertial>
+		<collision name="LFtoe_collision">
+			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.27"/>
+			<geometry>
+				<mesh filename="package://meshes/LFtoe.stl" scale="1.0 1.0 1.0"/>
+			</geometry>
+		</collision>
+		<visual name="LFtoe_visual">
+			<origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.27"/>
+			<geometry>
+				<mesh filename="package://meshes/LFtoe.stl" scale="1.0 1.0 1.0"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
 	<link name="LRtoe">
 		<inertial>
 			<mass value="0.1"/>
@@ -358,6 +364,7 @@
 			<material name="black"/>
 		</visual>
 	</link>
+	<!-- Imu_link -->
 	<link name="Imu">
 		<inertial>
 			<mass value="0.1"/>
@@ -378,6 +385,94 @@
 			<material name="blue"/>
 		</visual>
 	</link>
+	<!-- Hip_joint -->
+	<joint name="LFHip_joint" type="revolute">
+		<parent link="Base"/>
+		<child link="LFHip"/>
+		<origin rpy="0 0 0" xyz="0.26 0.145 0.05"/>
+		<axis xyz="1.0 0.0 0.0"/>
+		<limit effort="0" lower="-1.046" upper="1.57" velocity="0"/>
+	</joint>
+	<joint name="LRHip_joint" type="revolute">
+		<parent link="Base"/>
+		<child link="LRHip"/>
+		<origin rpy="0 0 0" xyz="-0.25999999999999995 0.145 0.05000000000000001"/>
+		<axis xyz="1.0 0.0 0.0"/>
+		<limit effort="0" lower="-1.046" upper="1.57" velocity="0"/>
+	</joint>
+	<joint name="RFHip_joint" type="revolute">
+		<parent link="Base"/>
+		<child link="RFHip"/>
+		<origin rpy="0 0 0" xyz="0.26 -0.145 0.050000000000000225"/>
+		<axis xyz="1.0 0.0 0.0"/>
+		<limit effort="0" lower="-1.57" upper="1.046" velocity="0"/>
+	</joint>
+	<joint name="RRHip_joint" type="revolute">
+		<parent link="Base"/>
+		<child link="RRHip"/>
+		<origin rpy="0 0 0" xyz="-0.26 -0.145 0.050000000000000065"/>
+		<axis xyz="1.0 0.0 0.0"/>
+		<limit effort="0" lower="-1.57" upper="1.046" velocity="0"/>
+	</joint>
+	<!-- Upper_joint -->
+	<joint name="LFUpper_joint" type="revolute">
+		<parent link="LFHip"/>
+		<child link="LFUpper"/>
+		<origin rpy="0 0 0" xyz="0.07 0.010000000000000009 0.0"/>
+		<axis xyz="0.0 1.0 0.0"/>
+		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
+	</joint>
+	<joint name="LRUpper_joint" type="revolute">
+		<parent link="LRHip"/>
+		<child link="LRUpper"/>
+		<origin rpy="0 0 0" xyz="-0.07000000000000012 0.010000000000000009 -6.938893903907228e-18"/>
+		<axis xyz="0.0 1.0 1.2246467991473522e-16"/>
+		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
+	</joint>
+	<joint name="RFUpper_joint" type="revolute">
+		<parent link="RFHip"/>
+		<child link="RFUpper"/>
+		<origin rpy="0 0 0" xyz="0.07000000000000006 -0.010000000000000037 6.245004513516506e-17"/>
+		<axis xyz="0.0 -1.0000000000000009 1.2246467991474777e-16"/>
+		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
+	</joint>
+	<joint name="RRUpper_joint" type="revolute">
+		<parent link="RRHip"/>
+		<child link="RRUpper"/>
+		<origin rpy="0 0 0" xyz="-0.07000000000000006 -0.009999999999999981 6.938893903907228e-18"/>
+		<axis xyz="-3.0847975724758214e-27 -0.9999999999999996 4.1633363423481236e-17"/>
+		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
+	</joint>
+    <!-- Lower_joint -->
+	<joint name="LFLower_joint" type="revolute">
+		<parent link="LFUpper"/>
+		<child link="LFLower"/>
+		<origin rpy="0 0 0" xyz="0.0 0.07 -0.27"/>
+		<axis xyz="0.0 1.0 0.0"/>
+		<limit effort="0" lower="-2.62" upper="2.62" velocity="0"/>
+	</joint>
+	<joint name="LRLower_joint" type="revolute">
+		<parent link="LRUpper"/>
+		<child link="LRLower"/>
+		<origin rpy="0 0 0" xyz="1.6653345369377348e-16 0.07000000000000003 -0.27"/>
+		<axis xyz="0.0 1.0 1.2246467991473525e-16"/>
+		<limit effort="0" lower="-2.62" upper="2.62" velocity="0"/>
+	</joint>
+	<joint name="RFLower_joint" type="revolute">
+		<parent link="RFUpper"/>
+		<child link="RFLower"/>
+		<origin rpy="0 0 0" xyz="-1.6653345369377348e-16 -0.07000000000000015 -0.27"/>
+		<axis xyz="2.775557561562891e-17 1.0000000000000002 -1.2246467991474772e-16"/>
+		<limit effort="0" lower="-2.62" upper="2.62" velocity="0"/>
+	</joint>
+	<joint name="RRLower_joint" type="revolute">
+		<parent link="RRUpper"/>
+		<child link="RRLower"/>
+		<origin rpy="0 0 0" xyz="0.0 -0.07000000000000015 -0.27"/>
+		<axis xyz="1.3877787807814452e-16 1.0000000000000016 -4.163336342348132e-17"/>
+		<limit effort="0" lower="-2.62" upper="2.62" velocity="0"/>
+	</joint>
+    <!-- toe_joint -->
 	<joint name="LFtoe_joint" type="fixed">
 		<parent link="LFLower"/>
 		<child link="LFtoe"/>
@@ -398,90 +493,7 @@
 		<child link="RRtoe"/>
 		<origin rpy="0 0 0" xyz="5.551115123125783e-17 -0.01499999999999993 -0.27"/>
 	</joint>
-	<joint name="LFUpper_joint" type="revolute">
-		<parent link="LFHip"/>
-		<child link="LFUpper"/>
-		<origin rpy="0 0 0" xyz="0.07 0.010000000000000009 0.0"/>
-		<axis xyz="0.0 1.0 0.0"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="LFHip_joint" type="revolute">
-		<parent link="Base"/>
-		<child link="LFHip"/>
-		<origin rpy="0 0 0" xyz="0.26 0.145 0.05"/>
-		<axis xyz="1.0 0.0 0.0"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="LFLower_joint" type="revolute">
-		<parent link="LFUpper"/>
-		<child link="LFLower"/>
-		<origin rpy="0 0 0" xyz="0.0 0.07 -0.27"/>
-		<axis xyz="0.0 1.0 0.0"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="LRHip_joint" type="revolute">
-		<parent link="Base"/>
-		<child link="LRHip"/>
-		<origin rpy="0 0 0" xyz="-0.25999999999999995 0.145 0.05000000000000001"/>
-		<axis xyz="-1.0 0.0 0.0"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="LRUpper_joint" type="revolute">
-		<parent link="LRHip"/>
-		<child link="LRUpper"/>
-		<origin rpy="0 0 0" xyz="-0.07000000000000012 0.010000000000000009 -6.938893903907228e-18"/>
-		<axis xyz="0.0 1.0 1.2246467991473522e-16"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="RFHip_joint" type="revolute">
-		<parent link="Base"/>
-		<child link="RFHip"/>
-		<origin rpy="0 0 0" xyz="0.26 -0.145 0.050000000000000225"/>
-		<axis xyz="1.0 0.0 0.0"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="RRHip_joint" type="revolute">
-		<parent link="Base"/>
-		<child link="RRHip"/>
-		<origin rpy="0 0 0" xyz="-0.26 -0.145 0.050000000000000065"/>
-		<axis xyz="-1.0 0.0 0.0"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="RFUpper_joint" type="revolute">
-		<parent link="RFHip"/>
-		<child link="RFUpper"/>
-		<origin rpy="0 0 0" xyz="0.07000000000000006 -0.010000000000000037 6.245004513516506e-17"/>
-		<axis xyz="0.0 -1.0000000000000009 1.2246467991474777e-16"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="RRUpper_joint" type="revolute">
-		<parent link="RRHip"/>
-		<child link="RRUpper"/>
-		<origin rpy="0 0 0" xyz="-0.07000000000000006 -0.009999999999999981 6.938893903907228e-18"/>
-		<axis xyz="-3.0847975724758214e-27 -0.9999999999999996 4.1633363423481236e-17"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="LRLower_joint" type="revolute">
-		<parent link="LRUpper"/>
-		<child link="LRLower"/>
-		<origin rpy="0 0 0" xyz="1.6653345369377348e-16 0.07000000000000003 -0.27"/>
-		<axis xyz="0.0 1.0 1.2246467991473525e-16"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="RFLower_joint" type="revolute">
-		<parent link="RFUpper"/>
-		<child link="RFLower"/>
-		<origin rpy="0 0 0" xyz="-1.6653345369377348e-16 -0.07000000000000015 -0.27"/>
-		<axis xyz="-2.775557561562891e-17 -1.0000000000000002 1.2246467991474772e-16"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
-	<joint name="RRLower_joint" type="revolute">
-		<parent link="RRUpper"/>
-		<child link="RRLower"/>
-		<origin rpy="0 0 0" xyz="0.0 -0.07000000000000015 -0.27"/>
-		<axis xyz="-1.3877787807814452e-16 -1.0000000000000016 4.163336342348132e-17"/>
-		<limit effort="0" lower="-3.14" upper="3.14" velocity="0"/>
-	</joint>
+	<!-- Imu_joint -->
 	<joint name="Imu_joint" type="fixed">
 		<parent link="Base"/>
 		<child link="Imu"/>

@@ -1,5 +1,5 @@
 # About
-SimQ is a simple quadrupedal robot created and maintained by aakmsk ([website](https://hirobot.tech)).
+SimQ is a simple quadrupedal robot created and maintained by aakmsk ([website](https://agirobots.com)).
 
 It can be used for reinforcement learning experiments using simulators such as PyBullet.
 
